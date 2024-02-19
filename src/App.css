@@ -20,10 +20,16 @@
   --shadow-color: #71717A;
 }
 
+@font-face {
+  font-family: 'Monstserrat';
+  src: local('Monstserrat'), url('./fonts/Montserrat-Regular.ttf') format('woff2');
+}
+
 
 body {
   color: var(--primary-color);
   background-color: var(--secondary-color);
+  /* font-family: 'Monstserrat', sans-serif; */
 }
 
 .d-flex {

@@ -8,6 +8,11 @@ body,
     color: var(--text-color);
     font-family: 'montserrat';
 }
+@font-face {
+  font-family: 'Montserrat';
+  src: local('Montserrat'), url('./assets/Montserrat/Montserrat-SemiBold.ttf') format('truetype');
+}
+
 body{
     width: 100%!important;
 }
