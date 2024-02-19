@@ -6,6 +6,7 @@ body,
     padding: 0;
     box-sizing: border-box;
     color: var(--text-color);
+    font-family: 'montserrat';
 }
 body{
     width: 100%!important;

@@ -180,7 +180,7 @@ a:hover {
 
 .infos-texts h4 {
   font-size: 48px;
-  text-wrap: nowrap;
+  white-space: nowrap;
 }
 
 .text-outlined {
@@ -482,13 +482,6 @@ input:checked+.theme-slider:before {
 
 
 
-
-
-
-
-
-@media screen and (max-width: 900px) {}
-
 @media screen and (min-width: 650px) and (max-width: 1199px) {
   .skills-container.desktop, .skills-container.mobile{
     display: none;
@@ -607,7 +600,7 @@ input:checked+.theme-slider:before {
   }
   .infos-texts h4 {
     font-size: 28px;
-    text-wrap: wrap;
+    white-space: wrap;
     display: block;
     line-height: 32px;
   }
@@ -709,9 +702,7 @@ input:checked+.theme-slider:before {
 
 @media screen and (max-width: 758px) {
 
-  .project{
-    /* align-items: start; */
-  }
+  
   .projects-container{
     gap: 28px;
   }
@@ -741,7 +732,6 @@ input:checked+.theme-slider:before {
 }
 
 @media screen and (min-width: 1440px) {
-
   .header,
   .container,
   .footer {
@@ -749,10 +739,6 @@ input:checked+.theme-slider:before {
     margin: 0 auto;
   }
 }
-
-
-
-
 
 
 @keyframes logo-spin {
