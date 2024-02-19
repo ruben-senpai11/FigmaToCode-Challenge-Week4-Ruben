@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 
 function ThemeMode(){
-
+  
   const [themeMode, setThemeMode] = useState(
     localStorage.getItem("theme") as string || "light"
   );

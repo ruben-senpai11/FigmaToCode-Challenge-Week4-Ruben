@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import settingsIcon from "../assets/settings-svgrepo-com.svg"
 import './popover.css'; 
 
