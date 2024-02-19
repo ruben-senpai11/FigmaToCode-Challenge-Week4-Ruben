@@ -382,7 +382,9 @@ a:hover {
 .copyright {
   gap: 12px;
 }
-
+.copyright p{
+  font-weight: 600;
+}  
 
 .theme-float {
   position: fixed;
@@ -590,7 +592,6 @@ input:checked+.theme-slider:before {
   }
   .copyright p{
     font-size: 12px;
-    font-weight: 600;
   }  
 
   .hero{
