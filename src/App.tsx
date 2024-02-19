@@ -38,8 +38,6 @@ import youtubeLogo from "./assets/youtube.svg"
 import applleLogo from "./assets/apple.svg"
 
 function App() {
-  const userTheme:string|null = localStorage.getItem("theme");
-
   const [mobileNav, setmobileNav] = useState(false);
   
   const toogleMenu = ()=>{

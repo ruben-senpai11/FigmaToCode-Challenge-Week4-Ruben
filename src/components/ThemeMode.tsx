@@ -1,10 +1,9 @@
 import { useEffect, useState } from 'react';
-import "./themeMode.css"
 
 function ThemeMode(){
 
   const [themeMode, setThemeMode] = useState(
-    localStorage.getItem("theme") ? localStorage.getItem("theme") : "light"
+    localStorage.getItem("theme") as string || "light"
   );
 
   const handleToggle = ()=>{  
@@ -18,7 +17,7 @@ function ThemeMode(){
   }
   useEffect(()=>{
     localStorage.setItem("theme", themeMode);
-    const userTheme:string|null = localStorage.getItem("theme");
+    const userTheme:string = localStorage.getItem("theme") as string;
     document.querySelector('html')?.setAttribute('data-theme', userTheme)
   }, [themeMode])
 
