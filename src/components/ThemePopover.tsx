@@ -17,7 +17,7 @@ const Popover = () => {
         <img width={32} height={32} src={settingsIcon} alt="" />
       </button>
       {isPopoverOpen && (
-        <div className="popover-content flex-column gap-16">
+        <div className="popover-hidden popover-content flex-column gap-16">
           <p className='f-600'>Theme mode</p>
           <ThemeMode/>    
         </div>

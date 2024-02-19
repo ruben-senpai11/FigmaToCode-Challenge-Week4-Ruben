@@ -250,6 +250,7 @@ a:hover {
   height: 186px;
   gap: 32px;
   border: 2px solid;
+  border-radius: 4px;
 }
 
 .skill:hover {
