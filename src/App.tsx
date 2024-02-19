@@ -182,7 +182,7 @@ function App() {
                 As a Senior Software Engineer at Google, I played a pivotal role in developing innovative solutions for Google's core search algorithms. Collaborating with a dynamic team of engineers, I contributed to the enhancement of search accuracy and efficiency, optimizing user experiences for millions of users worldwide.
               </h6>
             </div>
-            <div className="enterprise flex-column gap-28 background-gray">
+            <div className="enterprise flex-column gap-28">
               <div className="enterprise-label d-flex space-between">
                 <span className="d-flex gap-16">
                   <img src={youtubeLogo} alt="Google Logo" />
@@ -283,7 +283,7 @@ function App() {
               <p className="name f-800">Evren Shah</p>
               <p className="role">Designer</p>
             </div>
-            <div className="testimonial black-testimo flex-column align-center">
+            <div className="testimonial flex-column align-center">
               <img width={96} height={96} src={floraTestimonial} alt="Designer Image" />
               <p className="description">I recently had to jump on 10+ different calls across eight different countries to find the right owner.</p>
               <hr />

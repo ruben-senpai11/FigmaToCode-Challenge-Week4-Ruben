@@ -284,7 +284,9 @@ a:hover {
   border-radius: 10px;
   border: 1px solid var(--zinc-color);
 }
-
+.enterprise:hover{
+  background-color: var(--gray);
+}
 .enterprise h6,
 .enterprise p {
   color: var(--black-zinc);
@@ -318,7 +320,10 @@ a:hover {
   border-radius: 20px;
   box-shadow: 0 4px 8px var(--shadow-color);
 }
-
+.testimonial:hover{
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
 .testimonial hr {
   border: .1px solid var(--primary-color);
   width: 120px;
