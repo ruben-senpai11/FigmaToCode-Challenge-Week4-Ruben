@@ -1,9 +1,10 @@
+import { useState } from 'react';
 import './App.css'
-import ThemeMode from './components/temeMode';
+import ThemePopover from './components/ThemePopover';
 import { gsap } from "gsap";
 
-import logoImg from "./assets/logo 1 (1).png"
-import blackLogoImg from "./assets/Group.png"
+import logoImg from "./assets/logo 1 (1).svg"
+import blackLogoImg from "./assets/logo 1.svg"
 import downloadImg from "./assets/download.svg"
 import groundImg from "./assets/Rectangle 38.png"
 import facebook from "./assets/Button (1).png"
@@ -13,12 +14,18 @@ import discord from "./assets/Button (3).png"
 import moreIcon from "./assets/Read More.svg"
 import blackMoreIcon from "./assets/Read More Black.svg"
 import evrenIllustration from "./assets/evren-illustration.svg"
+import evrenMobile from "./assets/Frame 20.png"
 import aboutIllustration from "./assets/Group 1000015845.png"
+import mobileAbout from "./assets/column.png"
 import project1Image from "./assets/image 771.png"
+import project1ImageMobile from "./assets/mimage 771.png"
 import project2Image from "./assets/image 770.png"
+import project2ImageMobile from "./assets/mimage 7712.png"
 import project3Image from "./assets/image 770 (1).png"
+import project3ImageMobile from "./assets/mimage 7713.png"
 import evrenTestimonial from "./assets/Frame 18.png"
 import floraTestimonial from "./assets/Frame 18 (1).png"
+import menuIcon from "./assets/Vector.svg"
 
 import Skill from "./components/skill"
 import gitIcon from "./assets/icon-git.png"
@@ -34,6 +41,23 @@ import applleLogo from "./assets/apple.svg"
 function App() {
   const userTheme:string|null = localStorage.getItem("theme");
 
+  const [mobileNav, setmobileNav] = useState(false);
+  
+  const toogleMenu = ()=>{
+    if (mobileNav == false){
+      setmobileNav(true)
+    }else{
+      setmobileNav(false)
+    }
+  }
+  const setNavFalse =()=>{
+    setmobileNav(false)
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth' // Optional smooth scrolling behavior
+    });
+  }
+
   return (
     <>
       <nav className='header d-flex space-between'>
@@ -41,11 +65,11 @@ function App() {
           <img src={logoImg} alt="logo" />
           <h5>Personal</h5>
         </div>
-        <ul className='nav-links d-flex space-between gap-32'>
-          <li>About me</li>
-          <li>Skills</li>
-          <li>Project</li>
-          <li>Contact me</li>
+        <ul className={(mobileNav == true ? 'mobile-menu ' : '') + 'nav-links d-flex space-between gap-32'}>
+          <li onClick={setNavFalse} >About me</li>
+          <li onClick={setNavFalse} >Skills</li>
+          <li onClick={setNavFalse} >Project</li>
+          <li onClick={setNavFalse} >Contact me</li>
         </ul>
         <div className="nav-cta">
           <button className="cta">
@@ -53,20 +77,24 @@ function App() {
             <img src={downloadImg} alt="download" />
           </button>
         </div>
+        <div className="menu-icons">
+            <img src={menuIcon} alt="menuIcon"  className='menuIcon' onClick={toogleMenu} />
+          </div>
       </nav>
       <section className="hero d-flex align-center">
         <div className="container">
           <div className="evren d-flex space-between">
             <div className="infos flex-column gap-32">
               <div className="infos-texts flex-column gap-28">
-                <h4 className='d-flex gap-16'><span className="f-400">Hello I'am</span><span className="f-800">Evren Shah.</span></h4>
+                <h4 className='d-flex gap-16'><span className="f-400">Hello I'am </span><span className="f-800"> Evren Shah.</span></h4>
                 <h4 className='d-flex gap-16'><span className="f-800">Frontend </span><span className="f-800 text-outlined">Developer</span></h4>
-                <h4 className='d-flex gap-16'><span className="f-400">Based In</span><span className="f-800">India.</span></h4>
-                <p className='text-gray'>I'm Evren Shah Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to specimen book.</p>
+                <h4 className='d-flex gap-16'><span className="f-400">Based In </span><span className="f-800"> India.</span></h4>
+                <p className="light-text-gray text-gray">I'm Evren Shah Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to specimen book.</p>
               </div>
             </div>
             <div className="hero-illustration">
-              <img src={evrenIllustration} alt="" />
+              <img src={evrenIllustration} alt="" className='desktop-tablet' />
+              <img src={evrenMobile} alt="" className='s-mobile' />
             </div>
           </div>
           <div className="media-and-ground d-flex gap-32 space-between align-center">
@@ -85,7 +113,7 @@ function App() {
       <section className="skills">
         <div className="container d-flex flex-column justify-center gap-32">
           <h2 className='d-flex gap-16'><span className="f-400">My</span><span className="f-800">Skills</span></h2>
-          <div className="skills-container">
+          <div className="skills-container desktop">
             <div className="skills-row">
               <Skill skillIcon={gitIcon} skillLabel="Git" />
               <Skill skillIcon={javscriptIcon} skillLabel="Javascript" />
@@ -101,6 +129,44 @@ function App() {
               <Skill skillIcon={saasIcon} skillLabel="Saas/Scss" />
             </div>
           </div>
+          <div className="skills-container tablet">
+            <div className="skills-row">
+              <Skill skillIcon={gitIcon} skillLabel="Git" />
+              <Skill skillIcon={javscriptIcon} skillLabel="Javascript" />
+              <Skill skillIcon={saasIcon} skillLabel="Saas/Scss" />
+              <Skill skillIcon={nextIcon} skillLabel="Next.Js" />
+            </div>
+            <div className="skills-row">
+              <Skill skillIcon={storybookIcon} skillLabel="Storybook" />
+              <Skill skillIcon={nextIcon} skillLabel="Next.Js" />
+              <Skill skillIcon={gitIcon} skillLabel="Git" />
+              <Skill skillIcon={storybookIcon} skillLabel="Storybook" />
+              {/* <Skill skillIcon={socketIcon} skillLabel="Socket.io" />
+              <Skill skillIcon={saasIcon} skillLabel="Saas/Scss" /> */}
+            </div>
+          </div>
+          <div className="skills-container mobile">
+            <div className="skills-row">
+              <Skill skillIcon={gitIcon} skillLabel="Git" />
+              <Skill skillIcon={javscriptIcon} skillLabel="Javascript" />
+            </div>
+            <div className="skills-row">
+              <Skill skillIcon={saasIcon} skillLabel="Saas/Scss" />
+              <Skill skillIcon={nextIcon} skillLabel="Next.Js" />
+            </div>
+            <div className="skills-row">
+              <Skill skillIcon={storybookIcon} skillLabel="Storybook" />
+              <Skill skillIcon={nextIcon} skillLabel="Next.Js" />
+            </div>
+            <div className="skills-row">
+              <Skill skillIcon={gitIcon} skillLabel="Git" />
+              <Skill skillIcon={storybookIcon} skillLabel="Storybook" />
+            </div>
+            <div className="skills-row">
+              <Skill skillIcon={socketIcon} skillLabel="Socket.io" />
+              <Skill skillIcon={saasIcon} skillLabel="Saas/Scss" />
+            </div>
+          </div>
         </div>
       </section>
       <section className="experience">
@@ -108,7 +174,7 @@ function App() {
           <h2 className='d-flex gap-16'><span className="f-400">My</span><span className="f-800">Experience</span></h2>
           <div className="enterprises flex-column gap-32">
             <div className="enterprise flex-column gap-28">
-              <div className="d-flex space-between">
+              <div className="enterprise-label d-flex space-between">
                 <span className="d-flex gap-16">
                   <img src={googleLogo} alt="Google Logo" />
                   <h4 className="">Lead Software Engineer at Google</h4>
@@ -120,10 +186,10 @@ function App() {
               </h6>
             </div>
             <div className="enterprise flex-column gap-28 background-gray">
-              <div className="d-flex space-between">
+              <div className="enterprise-label d-flex space-between">
                 <span className="d-flex gap-16">
                   <img src={youtubeLogo} alt="Google Logo" />
-                  <h4 className="">Lead Software Engineer at Google</h4>
+                  <h4 className="">Software Engineer at Youtube</h4>
                 </span>
                 <p className="text-gray f-600">Jan 2017 - Oct 2019</p>
               </div>
@@ -132,10 +198,10 @@ function App() {
               </h6>
             </div>
             <div className="enterprise flex-column gap-28">
-              <div className="d-flex space-between">
+              <div className="enterprise-label d-flex space-between">
                 <span className="d-flex gap-16">
                   <img src={applleLogo} alt="Google Logo" />
-                  <h4 className="">Lead Software Engineer at Google</h4>
+                  <h4 className="">Junior Software Engineer at Apple</h4>
                 </span>
                 <p className="text-gray f-600">Jan 2016 - Dec 2017</p>
               </div>
@@ -149,14 +215,15 @@ function App() {
       <section className="about">
         <div className="container d-flex space-between gap-32">
           <div className="illustation-side">
-            <img src={aboutIllustration} alt="Illustration" />
+            <img src={aboutIllustration} alt="Illustration" className='desktop'/>
+            <img src={mobileAbout} alt="Illustration" className='mobile'/>
           </div>
           <div className="text-side">
             <h2 className='d-flex gap-16'><span className="f-400">About</span><span className="f-800">Me</span></h2>
             <div className="about-pitch flex-column gap-28">
-              <p className="text-gray">I'm a passionate, self-proclaimed designer who specializes in full stack development (React.js & Node.js). I am very enthusiastic about bringing the technical and visual aspects of digital products to life. User experience, pixel perfect design, and writing clear, readable, highly performant code matters to me.</p>
-              <p className="text-gray">I began my journey as a web developer in 2015, and since then, I've continued to grow and evolve as a developer, taking on new challenges and learning the latest technologies along the way. Now, in my early thirties, 7 years after starting my web development journey, I'm building cutting-edge web applications using modern technologies such as Next.js, TypeScript, Nestjs, Tailwindcss, Supabase and much more.</p>
-              <p className="text-gray">When I'm not in full-on developer mode, you can find me hovering around on twitter or on indie hacker, witnessing the journey of early startups or enjoying some free time. You can follow me on Twitter where I share tech-related bites and build in public, or you can follow me on GitHub.</p>
+              <p className="light-text-gray text-gray">I'm a passionate, self-proclaimed designer who specializes in full stack development (React.js & Node.js). I am very enthusiastic about bringing the technical and visual aspects of digital products to life. User experience, pixel perfect design, and writing clear, readable, highly performant code matters to me.</p>
+              <p className="light-text-gray text-gray">I began my journey as a web developer in 2015, and since then, I've continued to grow and evolve as a developer, taking on new challenges and learning the latest technologies along the way. Now, in my early thirties, 7 years after starting my web development journey, I'm building cutting-edge web applications using modern technologies such as Next.js, TypeScript, Nestjs, Tailwindcss, Supabase and much more.</p>
+              <p className="light-text-gray text-gray">When I'm not in full-on developer mode, you can find me hovering around on twitter or on indie hacker, witnessing the journey of early startups or enjoying some free time. You can follow me on Twitter where I share tech-related bites and build in public, or you can follow me on GitHub.</p>
             </div>
           </div>
         </div>
@@ -167,8 +234,9 @@ function App() {
 
           <div className="projects-container flex-column gap-48">
             <div className="project d-flex space-between gap-48">
-              <div className="d-flex">
-                <img src={project1Image} alt="Project image" />
+              <div className="project-image d-flex">
+                <img src={project1Image} alt="Project image" className='desktop'/>
+                <img src={project1ImageMobile} alt="Project image" className='mobile'/>
               </div>
               <div className="project-infos flex-column gap-28">
                 <h2>01</h2>
@@ -179,8 +247,9 @@ function App() {
               </div>
             </div>
             <div className="project project-inverted d-flex space-between gap-48">
-              <div className="d-flex">
-                <img src={project2Image} alt="Project image" />
+              <div className="project-image d-flex">
+                <img src={project2Image} alt="Project image" className='desktop'/>
+                <img src={project2ImageMobile} alt="Project image" className='mobile'/>
               </div>
               <div className="project-infos flex-column gap-28">
                 <h2>02</h2>
@@ -191,8 +260,9 @@ function App() {
               </div>
             </div>
             <div className="project d-flex space-between gap-48">
-              <div className="d-flex">
-                <img src={project3Image} alt="Project image" />
+              <div className="project-image d-flex">
+                <img src={project3Image} alt="Project image" className='desktop'/>
+                <img src={project3ImageMobile} alt="Project image" className='mobile'/>
               </div>
               <div className="project-infos flex-column gap-28">
                 <h2>03</h2>
@@ -271,7 +341,7 @@ function App() {
         </div>    
       </nav>
       <div className="theme-float">
-        <ThemeMode/>
+        <ThemePopover/>
       </div>
     </>
   )

@@ -34,5 +34,21 @@ li{
 
 @media screen and (max-width: 900px) {
 
+    h2{
+        font-size: 28px;
+    }
+    h3{
+        font-size: 32px;
+        font-weight: 700;
+    }
+    h4{
+        font-size: 24px;
+    }
+    li, h5 {
+        font-size: 20px;
+        color: var(--text-color);
+        font-weight: 600;
+        line-height: 24px;
+    }
 }
 
