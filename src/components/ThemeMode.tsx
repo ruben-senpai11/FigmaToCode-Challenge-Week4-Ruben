@@ -18,7 +18,7 @@ function ThemeMode(){
   }
   useEffect(()=>{
     localStorage.setItem("theme", themeMode);
-    const userTheme:string = localStorage.getItem("theme");
+    const userTheme:string|null = localStorage.getItem("theme");
     document.querySelector('html')?.setAttribute('data-theme', userTheme)
   }, [themeMode])
 

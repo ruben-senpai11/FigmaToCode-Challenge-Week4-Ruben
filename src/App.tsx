@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import './App.css'
 import ThemePopover from './components/ThemePopover';
-import { gsap } from "gsap";
 
 import logoImg from "./assets/logo 1 (1).svg"
 import blackLogoImg from "./assets/logo 1.svg"
