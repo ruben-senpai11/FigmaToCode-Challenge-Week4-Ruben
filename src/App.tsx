@@ -63,10 +63,10 @@ function App() {
           <h5>Personal</h5>
         </div>
         <ul className={(mobileNav == true ? 'mobile-menu ' : '') + 'nav-links d-flex space-between gap-32'}>
-          <li onClick={setNavFalse} >About me</li>
-          <li onClick={setNavFalse} >Skills</li>
-          <li onClick={setNavFalse} >Project</li>
-          <li onClick={setNavFalse} >Contact me</li>
+          <li onClick={setNavFalse} > <a href="#hero">About me</a></li>
+          <li onClick={setNavFalse} > <a href="#skills">Skills</a></li>
+          <li onClick={setNavFalse} > <a href="#projects">Project</a></li>
+          <li onClick={setNavFalse} > <a href="#contact">Contact me</a></li>
         </ul>
         <div className="nav-cta">
           <button className="cta">
@@ -78,7 +78,7 @@ function App() {
             <img src={menuIcon} alt="menuIcon"  className='menuIcon' onClick={toogleMenu} />
           </div>
       </nav>
-      <section className="hero d-flex align-center">
+      <section id='hero' className="hero d-flex align-center">
         <div className="container">
           <div className="evren d-flex space-between">
             <div className="infos flex-column gap-32">
@@ -107,7 +107,7 @@ function App() {
           </div>
         </div>
       </section>
-      <section className="skills">
+      <section id='skills' className="skills">
         <div className="container d-flex flex-column justify-center gap-32">
           <h2 className='d-flex gap-16'><span className="f-400">My</span><span className="f-800">Skills</span></h2>
           <div className="skills-container desktop">
@@ -225,7 +225,7 @@ function App() {
           </div>
         </div>
       </section>
-      <section className="projects">
+      <section id='projects' className="projects">
         <div className="black-container flex-column align-center gap-32">
           <h2 className='d-flex gap-16'><span className="f-400">My</span><span className="f-800">Projects</span></h2>
 
@@ -300,7 +300,7 @@ function App() {
           </div>
         </div>
       </section>
-      <section className="contact">
+      <section id='contact' className="contact">
         <div className="container d-flex space-between gap-48">
           <div className="contact-form flex-column gap-20">
             <input type="text" name="name" id="" placeholder='Your name' />

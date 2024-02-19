@@ -7,15 +7,16 @@ body,
     box-sizing: border-box;
     color: var(--text-color);
     font-family: 'montserrat';
+
 }
 @font-face {
   font-family: 'Montserrat';
   src: local('Montserrat'), url('./assets/Montserrat/Montserrat-SemiBold.ttf') format('truetype');
 }
-
-body{
-    width: 100%!important;
-}
+html {
+    scroll-behavior: smooth;
+  }
+  
 h2{
     padding: 20px 0;
     font-size: 48px;

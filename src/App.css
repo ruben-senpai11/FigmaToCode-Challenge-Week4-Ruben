@@ -20,11 +20,6 @@
   --shadow-color: #71717A;
 }
 
-@font-face {
-  font-family: 'Monstserrat';
-  src: local('Monstserrat'), url('./fonts/Montserrat-Regular.ttf') format('woff2');
-}
-
 
 body {
   color: var(--primary-color);
@@ -325,7 +320,7 @@ a:hover {
   color: var(--secondary-color);
 }
 .testimonial hr {
-  border: .1px solid var(--primary-color);
+  /* border: .1px solid var(--primary-color); */
   width: 120px;
   height: 1px;
 }
@@ -545,7 +540,6 @@ input:checked+.theme-slider:before {
   .nav-links li a {
     font-size: 18px;
     animation: endTransition 0.5s ease-in-out forwards;
-    color: #fff;
   }
 
   .nav-cta {
@@ -721,8 +715,9 @@ input:checked+.theme-slider:before {
     flex-direction: column;
   }
   .project{
-    width: 100%;
-    max-width: 100%;
+    width: 90%;
+    max-width: 90%;
+    margin: 0 auto;
   }
   .project-image{
     display: flex;
