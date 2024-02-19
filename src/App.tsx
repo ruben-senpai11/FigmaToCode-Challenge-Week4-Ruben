@@ -3,7 +3,9 @@ import './App.css'
 import ThemePopover from './components/ThemePopover';
 
 import logoImg from "./assets/logo 1 (1).svg"
-import blackLogoImg from "./assets/logo 1.svg"
+import logoMobile from "./assets/logo 1 (1).svg"
+import footerLogoImg from "./assets/logo 1.svg"
+import footerLogoMobile from "./assets/logo 1m.svg"
 import downloadImg from "./assets/download.svg"
 import groundImg from "./assets/Rectangle 38.png"
 import facebook from "./assets/Button (1).png"
@@ -24,7 +26,7 @@ import project3Image from "./assets/image 770 (1).png"
 import project3ImageMobile from "./assets/mimage 7713.png"
 import evrenTestimonial from "./assets/Frame 18.png"
 import floraTestimonial from "./assets/Frame 18 (1).png"
-import menuIcon from "./assets/Vector.svg"
+import menuIcon from "./assets/Vector2.svg"
 
 import Skill from "./components/skill"
 import gitIcon from "./assets/icon-git.png"
@@ -59,7 +61,8 @@ function App() {
     <>
       <nav className='header d-flex space-between'>
         <div className="logo d-flex">
-          <img src={logoImg} alt="logo" />
+          <img src={logoImg} alt="logo" className='desktop'/>
+          <img src={logoMobile} alt="logo" className='mobile'/>
           <h5>Personal</h5>
         </div>
         <ul className={(mobileNav == true ? 'mobile-menu ' : '') + 'nav-links d-flex space-between gap-32'}>
@@ -319,7 +322,7 @@ function App() {
           </div>
           <div className="contact-infos flex-column gap-40">
             <h4 className=''><span className="f-800">Let's </span><span className="f-800 text-outlined">talk </span><span className="f-800">for Something special</span></h4>
-            <p className="gray-text">I seek to push the limits of creativity to create high-engaging, user-friendly, and memorable interactive experiences.</p>
+            <p className="text-gray">I seek to push the limits of creativity to create high-engaging, user-friendly, and memorable interactive experiences.</p>
             <div className="flex-column gap-16">
               <h5><a href="https://mailto:albanhonfovou@gmail.com.com?subject=Get%20in%20touch&body=I%20saw%20your%20portfolio%20and%20I%20wanna%20book%20a%20journey" target='blank'>albanhonfovou@gmail.com</a></h5>
               <h5><a href="https://wa.me/+22996404757" target='blank'>+229 96404757</a></h5>
@@ -329,7 +332,8 @@ function App() {
       </section>
       <nav className="footer black-container">
         <div className="logo d-flex">
-          <img src={blackLogoImg} alt="logo" />
+          <img src={footerLogoImg} alt="logo" className='desktop'/>
+          <img src={footerLogoMobile} alt="logo" className='mobile'/>
           <h5>Personal</h5>
         </div>
         <div className="copyright flex-column">

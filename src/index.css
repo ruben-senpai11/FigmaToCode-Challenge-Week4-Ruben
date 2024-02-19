@@ -11,7 +11,7 @@ body,
 }
 @font-face {
   font-family: 'Montserrat';
-  src: local('Montserrat'), url('./assets/Montserrat/Montserrat-SemiBold.ttf') format('truetype');
+  src: local('Montserrat'), url('./assets/Montserrat/Montserrat-Regular.ttf') format('truetype');
 }
 html {
     scroll-behavior: smooth;

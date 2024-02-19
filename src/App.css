@@ -78,7 +78,7 @@ body {
 }
 
 .f-400 {
-  font-weight: 400;
+  font-weight: 400!important;
 }
 
 .f-600 {
@@ -143,6 +143,7 @@ a:hover {
 }
 
 .logo h5 {
+  font-size: 20px;
   font-weight: 700;
 }
 
@@ -519,6 +520,7 @@ input:checked+.theme-slider:before {
   .footer {
     padding: 16px;
   }
+
   
   .header {
     margin: 0;
@@ -582,7 +584,11 @@ input:checked+.theme-slider:before {
     background-color: var(--secondary-color);
   }
 
+  .copyright {
+    gap: 6px;
+  }
   .copyright p{
+    font-size: 12px;
     font-weight: 600;
   }  
 
