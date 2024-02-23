@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import settingsIcon from "../assets/settings-svgrepo-com.svg"
+import settingsIcon from "../assets/icons/settings-svgrepo-com.svg"
 import './popover.css'; 
 
 import ThemeMode from './ThemeMode';

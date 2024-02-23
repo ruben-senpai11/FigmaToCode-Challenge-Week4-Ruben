@@ -6,13 +6,10 @@ body,
     padding: 0;
     box-sizing: border-box;
     color: var(--text-color);
-    font-family: 'montserrat';
+    font-family: 'sora';
 
 }
-@font-face {
-  font-family: 'Montserrat';
-  src: local('Montserrat'), url('./assets/Montserrat/Montserrat-Regular.ttf') format('truetype');
-}
+
 html {
     scroll-behavior: smooth;
   }
