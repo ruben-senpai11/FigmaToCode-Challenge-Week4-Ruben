@@ -32,7 +32,7 @@ import Skill from "./components/skill"
 import gitIcon from "./assets/icons/icon-git.svg"
 import javscriptIcon from "./assets/icons/icon-javscript.svg"
 import saasIcon from "./assets/icons/icon-sass.svg"
-import nextIcon from "./assets/icons/icon-next.svg"
+import nestIcon from "./assets/icons/icon-next.svg"
 import storybookIcon from "./assets/icons/icon-storybook.svg"
 import socketIcon from "./assets/icons/icon-socket.svg"
 import googleLogo from "./assets/icons/google.png"
@@ -118,11 +118,11 @@ function App() {
               <Skill skillIcon={gitIcon} skillLabel="Git" />
               <Skill skillIcon={javscriptIcon} skillLabel="Javascript" />
               <Skill skillIcon={saasIcon} skillLabel="Saas/Scss" />
-              <Skill skillIcon={nextIcon} skillLabel="Next.Js" />
+              <Skill skillIcon={nestIcon} skillLabel="Nest.Js" />
               <Skill skillIcon={storybookIcon} skillLabel="Storybook" />
             </div>
             <div className="skills-row">
-              <Skill skillIcon={nextIcon} skillLabel="Next.Js" />
+              <Skill skillIcon={nestIcon} skillLabel="Nest.Js" />
               <Skill skillIcon={gitIcon} skillLabel="Git" />
               <Skill skillIcon={storybookIcon} skillLabel="Storybook" />
               <Skill skillIcon={socketIcon} skillLabel="Socket.io" />
@@ -134,11 +134,11 @@ function App() {
               <Skill skillIcon={gitIcon} skillLabel="Git" />
               <Skill skillIcon={javscriptIcon} skillLabel="Javascript" />
               <Skill skillIcon={saasIcon} skillLabel="Saas/Scss" />
-              <Skill skillIcon={nextIcon} skillLabel="Next.Js" />
+              <Skill skillIcon={nestIcon} skillLabel="Nest.Js" />
             </div>
             <div className="skills-row">
               <Skill skillIcon={storybookIcon} skillLabel="Storybook" />
-              <Skill skillIcon={nextIcon} skillLabel="Next.Js" />
+              <Skill skillIcon={nestIcon} skillLabel="Nest.Js" />
               <Skill skillIcon={gitIcon} skillLabel="Git" />
               <Skill skillIcon={storybookIcon} skillLabel="Storybook" />
               {/* <Skill skillIcon={socketIcon} skillLabel="Socket.io" />
@@ -152,11 +152,11 @@ function App() {
             </div>
             <div className="skills-row">
               <Skill skillIcon={saasIcon} skillLabel="Saas/Scss" />
-              <Skill skillIcon={nextIcon} skillLabel="Next.Js" />
+              <Skill skillIcon={nestIcon} skillLabel="Nest.Js" />
             </div>
             <div className="skills-row">
               <Skill skillIcon={storybookIcon} skillLabel="Storybook" />
-              <Skill skillIcon={nextIcon} skillLabel="Next.Js" />
+              <Skill skillIcon={nestIcon} skillLabel="Nest.Js" />
             </div>
             <div className="skills-row">
               <Skill skillIcon={gitIcon} skillLabel="Git" />
@@ -222,7 +222,7 @@ function App() {
             <h2 className='d-flex gap-16'><span className="f-400">About</span><span className="f-800">Me</span></h2>
             <div className="about-pitch flex-column gap-28">
               <p className="light-text-gray text-gray">I'm a passionate, self-proclaimed designer who specializes in full stack development (React.js & Node.js). I am very enthusiastic about bringing the technical and visual aspects of digital products to life. User experience, pixel perfect design, and writing clear, readable, highly performant code matters to me.</p>
-              <p className="light-text-gray text-gray">I began my journey as a web developer in 2015, and since then, I've continued to grow and evolve as a developer, taking on new challenges and learning the latest technologies along the way. Now, in my early thirties, 7 years after starting my web development journey, I'm building cutting-edge web applications using modern technologies such as Next.js, TypeScript, Nestjs, Tailwindcss, Supabase and much more.</p>
+              <p className="light-text-gray text-gray">I began my journey as a web developer in 2015, and since then, I've continued to grow and evolve as a developer, taking on new challenges and learning the latest technologies along the way. Now, in my early thirties, 7 years after starting my web development journey, I'm building cutting-edge web applications using modern technologies such as Nest.js, TypeScript, Nestjs, Tailwindcss, Supabase and much more.</p>
               <p className="light-text-gray text-gray">When I'm not in full-on developer mode, you can find me hovering around on twitter or on indie hacker, witnessing the journey of early startups or enjoying some free time. You can follow me on Twitter where I share tech-related bites and build in public, or you can follow me on GitHub.</p>
             </div>
           </div>
