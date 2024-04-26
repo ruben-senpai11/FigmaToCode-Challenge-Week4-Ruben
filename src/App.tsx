@@ -41,15 +41,15 @@ import applleLogo from "./assets/icons/apple.svg"
 
 function App() {
   const [mobileNav, setmobileNav] = useState(false);
-  
-  const toogleMenu = ()=>{
-    if (mobileNav == false){
+
+  const toogleMenu = () => {
+    if (mobileNav == false) {
       setmobileNav(true)
-    }else{
+    } else {
       setmobileNav(false)
     }
   }
-  const setNavFalse =()=>{
+  const setNavFalse = () => {
     setmobileNav(false)
     window.scrollTo({
       top: 0,
@@ -61,8 +61,8 @@ function App() {
     <>
       <nav className='header d-flex space-between'>
         <div className="logo d-flex">
-          <img src={logoImg} alt="logo" className='desktop'/>
-          <img src={logoMobile} alt="logo" className='mobile'/>
+          <img src={logoImg} alt="logo" className='desktop' />
+          <img src={logoMobile} alt="logo" className='mobile' />
           <h5>Personal</h5>
         </div>
         <ul className={(mobileNav == true ? 'mobile-menu ' : '') + 'nav-links d-flex space-between gap-32'}>
@@ -78,8 +78,8 @@ function App() {
           </button>
         </div>
         <div className="menu-icons">
-            <img src={menuIcon} alt="menuIcon"  className='menuIcon' onClick={toogleMenu} />
-          </div>
+          <img src={menuIcon} alt="menuIcon" className='menuIcon' onClick={toogleMenu} />
+        </div>
       </nav>
       <section id='hero' className="hero d-flex align-center">
         <div className="container">
@@ -215,8 +215,8 @@ function App() {
       <section className="about">
         <div className="container d-flex space-between gap-32">
           <div className="illustation-side">
-            <img src={aboutIllustration} alt="Illustration" className='desktop'/>
-            <img src={mobileAbout} alt="Illustration" className='mobile'/>
+            <img src={aboutIllustration} alt="Illustration" className='desktop' />
+            <img src={mobileAbout} alt="Illustration" className='mobile' />
           </div>
           <div className="text-side">
             <h2 className='d-flex gap-16'><span className="f-400">About</span><span className="f-800">Me</span></h2>
@@ -235,8 +235,8 @@ function App() {
           <div className="projects-container flex-column gap-48">
             <div className="project d-flex space-between gap-48">
               <div className="project-image d-flex">
-                <img src={project1Image} alt="Project image" className='desktop'/>
-                <img src={project1ImageMobile} alt="Project image" className='mobile'/>
+                <img src={project1Image} alt="Project image" className='desktop' />
+                <img src={project1ImageMobile} alt="Project image" className='mobile' />
               </div>
               <div className="project-infos flex-column gap-28">
                 <h2>01</h2>
@@ -248,8 +248,8 @@ function App() {
             </div>
             <div className="project project-inverted d-flex space-between gap-48">
               <div className="project-image d-flex">
-                <img src={project2Image} alt="Project image" className='desktop'/>
-                <img src={project2ImageMobile} alt="Project image" className='mobile'/>
+                <img src={project2Image} alt="Project image" className='desktop' />
+                <img src={project2ImageMobile} alt="Project image" className='mobile' />
               </div>
               <div className="project-infos flex-column gap-28">
                 <h2>02</h2>
@@ -261,8 +261,8 @@ function App() {
             </div>
             <div className="project d-flex space-between gap-48">
               <div className="project-image d-flex">
-                <img src={project3Image} alt="Project image" className='desktop'/>
-                <img src={project3ImageMobile} alt="Project image" className='mobile'/>
+                <img src={project3Image} alt="Project image" className='desktop' />
+                <img src={project3ImageMobile} alt="Project image" className='mobile' />
               </div>
               <div className="project-infos flex-column gap-28">
                 <h2>03</h2>
@@ -332,17 +332,17 @@ function App() {
       </section>
       <nav className="footer black-container">
         <div className="logo d-flex">
-          <img src={footerLogoImg} alt="logo" className='desktop'/>
-          <img src={footerLogoMobile} alt="logo" className='mobile'/>
+          <img src={footerLogoImg} alt="logo" className='desktop' />
+          <img src={footerLogoMobile} alt="logo" className='mobile' />
           <h5>Personal</h5>
         </div>
         <div className="copyright flex-column">
           <p>@ 2019-2023 Personal</p>
-          <p>Made In Figma</p>  
-        </div>    
+          <p>Made In Figma</p>
+        </div>
       </nav>
       <div className="theme-float">
-        <ThemePopover/>
+        <ThemePopover />
       </div>
     </>
   )
